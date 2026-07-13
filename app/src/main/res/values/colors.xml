@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="country_color">#E5FFFF</color>
+    <color name="comment_color">#EAEAEA</color>
+    <color name="rainDropsColor">#34C0F0</color>
+    <!-- summer background -->
+    <color name="summerStartColor">#F2A300</color>
+    <color name="summerMiddleColor">#FEBF12</color>
+    <color name="summerEndColor">#E66E50</color>
+    <!-- rainy background -->
+    <color name="rainyStartColor">#D4EEFF</color>
+    <color name="rainyMiddleColor">#4890E9</color>
+    <color name="rainyEndColor">#4890E9</color>
+    <!-- plain gray background -->
+    <color name="grayBackgroundColor">#242424</color>
+    <!-- settings background -->
+    <color name="midSettingsBackgroundStartColor">#3A6073</color>
+    <color name="midSettingsBackgroundCenterColor">#4F7C9C</color>
+    <color name="midSettingsBackgroundEndColor">#6FA3D8</color>
+</resources>

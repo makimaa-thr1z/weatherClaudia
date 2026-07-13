@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_settings"
+    tools:context=".SettingsFragment">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/san_frans_display"
+        android:text="@string/themeTitle"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/dock_less"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-2dp"
+            android:fontFamily="@font/san_frans_display"
+            android:text="@string/theme"
+            android:textColor="@color/country_color"
+            android:textSize="14sp" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+        <!-- Source - https://stackoverflow.com/a/17650125
+             Posted by Nicolas Tyler, modified by community. See post 'Timeline' for change history
+             Retrieved 2026-07-13, License - CC BY-SA 4.0 -->
+        <Spinner
+            android:id="@+id/themesToChoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/san_frans_display"
+        android:text="@string/additional"/>
+    <!-- temperature formatting , ex: Celsius instead of Fahrenheit -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/dock_less"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-2dp"
+            android:fontFamily="@font/san_frans_display"
+            android:text="@string/tempFormats"
+            android:textColor="@color/country_color"
+            android:textSize="14sp" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+        <!-- Source - https://stackoverflow.com/a/17650125
+             Posted by Nicolas Tyler, modified by community. See post 'Timeline' for change history
+             Retrieved 2026-07-13, License - CC BY-SA 4.0 -->
+        <Spinner
+            android:id="@+id/formattingTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"/>
+    </LinearLayout>
+    <!-- credits window: -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/san_frans_display"
+        android:text="@string/creds"/>
+    <LinearLayout
+        android:id="@+id/creditsWindow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/dock_less"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/san_frans_display"
+            android:text="@string/thanks_title"
+            android:textColor="@color/country_color"
+            android:textSize="14sp" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+        <!-- Source - https://stackoverflow.com/a/17650125
+             Posted by Nicolas Tyler, modified by community. See post 'Timeline' for change history
+             Retrieved 2026-07-13, License - CC BY-SA 4.0 -->
+        <ImageButton
+            android:layout_marginTop="3dp"
+            android:layout_width="@dimen/rightArrowSize"
+            android:layout_height="@dimen/rightArrowSize"
+            android:background="@android:color/transparent"
+            android:src="@drawable/right_arrow"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cloudSize">400dp</dimen>
+    <dimen name="bottomTrayIconSize">25dp</dimen>
+    <dimen name="bottomTrayMarginSpacing">15dp</dimen>
+    <dimen name="refreshIconSize">30dp</dimen>
+    <dimen name="cloudyIconYAxisSpacing">90</dimen>
+    <dimen name="partiallyCloudyIconYAxisSpacing">50</dimen>
+    <!-- drizzle_rain_shower.xml -->
+    <dimen name="drizzleRainShowerYAxisSpacing">-30</dimen>
+    <!-- the rain icon confs for the drizzle_rain_shower.xml -->
+    <dimen name="rainCloudIconXAxisSpacing">-45.5</dimen>
+    <dimen name="rainCloudIconYAxisSpacing">5</dimen>
+    <dimen name="rainCloudIconAngle">-7</dimen>
+    <!-- cloud icon itself / rain.xml -->
+    <dimen name="cloudIconXAxisSpacing">100</dimen>
+    <dimen name="cloudIconYAxisSpacing">90</dimen>
+    <!-- rain droplets / rain.xml -->
+    <dimen name="rainIconAngle">-5</dimen>
+    <dimen name="rainIconYAxisSpacing">70</dimen>
+    <dimen name="rainIconXAxisSpacing">190</dimen>
+    <!-- snow icon X axis spacing / winter.xml -->
+    <dimen name="snowIconXAxisSpacing">-1.6</dimen>
+    <!-- icon size for the right arrow -- settings_screen.xml -->
+    <dimen name="rightArrowSize">20dp</dimen>
+</resources>

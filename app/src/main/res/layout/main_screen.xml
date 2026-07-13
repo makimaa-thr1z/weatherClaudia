@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!-- Top Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+        <TextView
+            android:id="@+id/chosenCountryArea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/countryExample"
+            android:textColor="@color/country_color"
+            android:textSize="24sp" />
+        <ImageButton
+            android:id="@+id/refreshIcon"
+            android:layout_width="@dimen/refreshIconSize"
+            android:layout_height="@dimen/refreshIconSize"
+            android:background="@android:color/transparent"
+            android:src="@drawable/refresh"
+            android:layout_gravity="center_vertical" />
+        <ImageButton
+            android:id="@+id/settingsIcon"
+            android:layout_width="@dimen/refreshIconSize"
+            android:layout_height="@dimen/refreshIconSize"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/settings"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/cloudIcon"
+        android:layout_width="@dimen/cloudSize"
+        android:layout_height="@dimen/cloudSize"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/winter" />
+    <!-- Temperature Section -->
+    <TextView
+        android:id="@+id/temperatureText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:translationY="-5dp"
+        android:gravity="center_horizontal"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/san_frans_display"
+        android:text="18.2"
+        android:textColor="@color/country_color"
+        android:textSize="60sp" />
+    <TextView
+        android:id="@+id/weatherComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginEnd="3dp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/san_frans"
+        android:translationY="-4dp"
+        android:text="@string/commentExample"
+        android:textColor="@color/comment_color"
+        android:textSize="24sp" />
+    <!-- Bottom Tray -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <LinearLayout
+        android:id="@+id/weatherDock"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/dock"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp">
+        <!-- Wind -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/wind"
+                app:tint="@android:color/white" />
+            <TextView
+                android:id="@+id/windSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="12 km/h"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wind"
+                android:textColor="#B3FFFFFF"
+                android:textSize="11sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="36dp"
+            android:background="#22FFFFFF" />
+        <!-- Humidity -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/humidity"
+                app:tint="@android:color/white" />
+            <TextView
+                android:id="@+id/humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="90%"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/humidity"
+                android:textColor="#B3FFFFFF"
+                android:textSize="11sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="36dp"
+            android:background="#22FFFFFF" />
+        <!-- Rain -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/wet"
+                app:tint="@android:color/white" />
+            <TextView
+                android:id="@+id/rainProbability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="100%"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rain"
+                android:textColor="#B3FFFFFF"
+                android:textSize="11sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

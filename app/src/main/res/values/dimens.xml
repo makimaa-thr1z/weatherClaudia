@@ -21,6 +21,6 @@
     <dimen name="rainIconXAxisSpacing">190</dimen>
     <!-- snow icon X axis spacing / winter.xml -->
     <dimen name="snowIconXAxisSpacing">-1.6</dimen>
-    <!-- icon size for the right arrow -- settings_screen.xml -->
+    <!-- icon size for the right arrow - settings_screen.xml -->
     <dimen name="rightArrowSize">20dp</dimen>
 </resources>

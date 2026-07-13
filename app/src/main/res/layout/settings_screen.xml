@@ -1,124 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/bg_settings"
     tools:context=".SettingsFragment">
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:orientation="vertical"
         android:layout_marginStart="20dp"
-        android:layout_marginBottom="10dp"
-        android:textSize="20sp"
-        android:fontFamily="@font/san_frans_display"
-        android:text="@string/themeTitle"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/dock_less"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp">
+        android:layout_marginTop="50dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-2dp"
-            android:fontFamily="@font/san_frans_display"
-            android:text="@string/theme"
-            android:textColor="@color/country_color"
-            android:textSize="14sp" />
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1"/>
-        <!-- Source - https://stackoverflow.com/a/17650125
-             Posted by Nicolas Tyler, modified by community. See post 'Timeline' for change history
-             Retrieved 2026-07-13, License - CC BY-SA 4.0 -->
-        <Spinner
-            android:id="@+id/themesToChoose"
+            android:text="@string/settings"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/san_frans_display" />
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:spinnerMode="dropdown"/>
+            android:text="@string/settings_bottom_text"
+            android:textSize="15sp"
+            android:textColor="#B3FFFFFF"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/san_frans_display" />
     </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="10dp"
-        android:textSize="20sp"
-        android:fontFamily="@font/san_frans_display"
-        android:text="@string/additional"/>
-    <!-- temperature formatting , ex: Celsius instead of Fahrenheit -->
+        android:text="@string/general"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="#99FFFFFF"
+        android:fontFamily="@font/san_frans_display" />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="72dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/glass_card"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:background="@drawable/dock_less"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-2dp"
-            android:fontFamily="@font/san_frans_display"
-            android:text="@string/tempFormats"
-            android:textColor="@color/country_color"
-            android:textSize="14sp" />
-        <View
+        android:paddingHorizontal="20dp">
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_temperature"
+            app:tint="@android:color/white" />
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1"/>
-        <!-- Source - https://stackoverflow.com/a/17650125
-             Posted by Nicolas Tyler, modified by community. See post 'Timeline' for change history
-             Retrieved 2026-07-13, License - CC BY-SA 4.0 -->
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperature"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                android:fontFamily="@font/san_frans_display"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preferred unit"
+                android:textColor="#88FFFFFF"
+                android:textSize="12sp"/>
+        </LinearLayout>
         <Spinner
             android:id="@+id/formattingTemp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:spinnerMode="dropdown"/>
+            android:layout_height="wrap_content"/>
     </LinearLayout>
-    <!-- credits window: -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="10dp"
-        android:textSize="20sp"
-        android:fontFamily="@font/san_frans_display"
-        android:text="@string/creds"/>
+        android:text="About"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="#99FFFFFF"
+        android:fontFamily="@font/san_frans_display"/>
     <LinearLayout
         android:id="@+id/creditsWindow"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="72dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/glass_card"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:background="@drawable/dock_less"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:fontFamily="@font/san_frans_display"
-            android:text="@string/thanks_title"
-            android:textColor="@color/country_color"
-            android:textSize="14sp" />
-        <View
+        android:paddingHorizontal="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless">
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_info"
+            app:tint="@android:color/white" />
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1"/>
-        <!-- Source - https://stackoverflow.com/a/17650125
-             Posted by Nicolas Tyler, modified by community. See post 'Timeline' for change history
-             Retrieved 2026-07-13, License - CC BY-SA 4.0 -->
-        <ImageButton
-            android:layout_marginTop="3dp"
-            android:layout_width="@dimen/rightArrowSize"
-            android:layout_height="@dimen/rightArrowSize"
-            android:background="@android:color/transparent"
-            android:src="@drawable/right_arrow"/>
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credits"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                android:fontFamily="@font/san_frans_display"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Libraries &amp; acknowledgements"
+                android:textColor="#88FFFFFF"
+                android:textSize="12sp"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/right_arrow"
+            app:tint="@android:color/white" />
     </LinearLayout>
 </LinearLayout>

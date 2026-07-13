@@ -17,4 +17,6 @@
     <color name="midSettingsBackgroundStartColor">#3A6073</color>
     <color name="midSettingsBackgroundCenterColor">#4F7C9C</color>
     <color name="midSettingsBackgroundEndColor">#6FA3D8</color>
+    <!-- divider -->
+    <color name="dockDividerColor">#22FFFFFF</color>
 </resources>

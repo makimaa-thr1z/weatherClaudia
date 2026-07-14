@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/bg_hailstorm"
     tools:context=".MainActivity">
     <!-- Top Section -->
     <LinearLayout
@@ -22,7 +23,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/poppins_bold"
-            android:text="@string/countryExample"
             android:textColor="@color/country_color"
             android:textSize="24sp" />
         <ImageButton
@@ -37,7 +37,8 @@
             android:layout_width="@dimen/refreshIconSize"
             android:layout_height="@dimen/refreshIconSize"
             android:background="@android:color/transparent"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="-3dp"
             android:src="@drawable/settings"
             android:layout_gravity="center_vertical" />
     </LinearLayout>
@@ -47,18 +48,17 @@
         android:layout_height="@dimen/cloudSize"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"
-        android:src="@drawable/winter" />
+        android:src="@drawable/rain" />
     <!-- Temperature Section -->
     <TextView
         android:id="@+id/temperatureText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:translationY="-5dp"
+        android:translationY="-20dp"
         android:gravity="center_horizontal"
         android:includeFontPadding="false"
         android:fontFamily="@font/san_frans_display"
-        android:text="18.2"
         android:textColor="@color/country_color"
         android:textSize="60sp" />
     <TextView
@@ -70,8 +70,7 @@
         android:layout_marginEnd="3dp"
         android:includeFontPadding="false"
         android:fontFamily="@font/san_frans"
-        android:translationY="-4dp"
-        android:text="@string/commentExample"
+        android:translationY="-15dp"
         android:textColor="@color/comment_color"
         android:textSize="24sp" />
     <!-- Bottom Tray -->
@@ -107,15 +106,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="12 km/h"
                 android:textColor="@android:color/white"
                 android:textSize="14sp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/wind"
-                android:textColor="#B3FFFFFF"
-                android:textSize="11sp" />
         </LinearLayout>
         <View
             android:layout_width="1dp"
@@ -139,16 +131,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="90%"
                 android:textColor="@android:color/white"
                 android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/humidity"
-                android:textColor="#B3FFFFFF"
-                android:textSize="11sp" />
         </LinearLayout>
         <View
             android:layout_width="1dp"
@@ -172,15 +156,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="100%"
                 android:textColor="@android:color/white"
                 android:textSize="14sp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/rain"
-                android:textColor="#B3FFFFFF"
-                android:textSize="11sp"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

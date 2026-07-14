@@ -21,9 +21,17 @@ class MainScreen : Fragment()
     private lateinit var rainOmeter: TextView;
     private lateinit var surfacePressure: TextView;
     private lateinit var humidity: TextView;
-    fun setCloudicon(arrayIndex: Int)
+    private lateinit var rootLayout: View;
+    fun setDummyText()
     {
-
+        countryArea.text = "Japan";
+        temperature.text = getString(R.string.temperature_format, 18.5, getString(R.string.degree));
+        surfacePressure.text = "100%";
+        humidity.text = "100%";
+        rainOmeter.text = "100%";
+        weatherComment.text = "mostly sunny";
+        cloudIcon.setImageResource(R.drawable.mainly_clear);
+        rootLayout.setBackgroundResource(R.drawable.bg_summer);
     }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
     {
@@ -33,9 +41,6 @@ class MainScreen : Fragment()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?)
     {
         super.onViewCreated(view, savedInstanceState);
-        // icons:
-        cloudIconsArray = intArrayOf(R.drawable.overcast, R.drawable.drizzle_rain_shower, R.drawable.sunny, R.drawable.rain,
-            R.drawable.winter, R.drawable.drizzle_rain_shower, R.drawable.partlycloudy);
         cloudIcon = view.findViewById(R.id.cloudIcon);
         refreshIcon = view.findViewById(R.id.refreshIcon);
         // texts:
@@ -45,9 +50,15 @@ class MainScreen : Fragment()
         rainOmeter = view.findViewById(R.id.rainProbability);
         surfacePressure = view.findViewById(R.id.windSpeed);
         humidity = view.findViewById(R.id.humidity);
+        // lroot layout:
+        rootLayout = view.findViewById(R.id.main);
+        // aww hell nah gng
+        setDummyText();
         view.findViewById<ImageButton>(R.id.settingsIcon).setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, SettingsFragment()).addToBackStack(null).commit()
+                .setCustomAnimations(R.anim.slide_in, R.anim.fade_out, R.anim.fade_in,R.anim.slide_out)
+                .replace(R.id.fragmentContainer, SettingsFragment()).addToBackStack(null)
+                .commit()
         }
     }
 }

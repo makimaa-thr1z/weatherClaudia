@@ -11,9 +11,9 @@
     <color name="rainyStartColor">#D4EEFF</color>
     <color name="rainyMiddleColor">#4890E9</color>
     <color name="rainyEndColor">#4890E9</color>
-    <!-- plain gray background -->
-    <color name="grayBackgroundColor">#242424</color>
-    <!-- settings background -->
+    <!-- black background -->
+    <color name="pitchBlackBackground">#000000</color>
+    <!-- hailstorm background -->
     <color name="midSettingsBackgroundStartColor">#3A6073</color>
     <color name="midSettingsBackgroundCenterColor">#4F7C9C</color>
     <color name="midSettingsBackgroundEndColor">#6FA3D8</color>

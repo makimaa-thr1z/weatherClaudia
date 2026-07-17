@@ -8,6 +8,11 @@ class MainActivity : AppCompatActivity()
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if(savedInstanceState == null)
-            supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer, MainScreen()).commit();
+        {
+            if(!getSharedPreferences("basic_prefs", MODE_PRIVATE).getBoolean("isSetupOver", false))
+                supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer, OnBoardFragment()).commit();
+            else
+                supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer, MainScreen()).commit();
+        }
     }
 }

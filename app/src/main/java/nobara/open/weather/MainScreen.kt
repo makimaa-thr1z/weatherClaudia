@@ -81,28 +81,5 @@ class MainScreen : Fragment()
                 .setCustomAnimations(R.anim.slide_in, R.anim.fade_out, R.anim.fade_in,R.anim.slide_out)
                 .replace(R.id.fragmentContainer, SettingsFragment()).addToBackStack(null).commit();
         }
-        // let's check if we have the location permission or not, if we
-        // don't, we just request it again and quit once this idiot denies it again.
-        if(!LocationPermHelper.hasAccessFinePermission(requireActivity() as MainActivity))
-        {
-            LocationPermHelper.requestFinePerm(requireActivity() as MainActivity?);
-            if(!LocationPermHelper.hasAccessFinePermission(requireActivity() as MainActivity))
-            {
-                Toast.makeText(context, getString(R.string.locationDenial), Toast.LENGTH_SHORT).show();
-                activity?.finish();
-            }
-        }
-    }
-    object LocationPermHelper {
-        private val basicPermission = arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION);
-        const val PERMREQCODE = 0;
-        fun hasAccessFinePermission(activity: MainActivity): Boolean
-        {
-            return (ContextCompat.checkSelfPermission(activity, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)
-        }
-        fun requestFinePerm(activity: MainActivity?)
-        {
-            ActivityCompat.requestPermissions(activity!!, basicPermission, PERMREQCODE);
-        }
     }
 }

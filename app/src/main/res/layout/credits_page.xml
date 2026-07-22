@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/creditsWindow"
+    android:background="@color/pitchBlackBackground"
     android:orientation="vertical"
     android:paddingHorizontal="20dp"
     android:paddingTop="72dp"

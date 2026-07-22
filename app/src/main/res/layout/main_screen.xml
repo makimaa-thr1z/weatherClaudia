@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/pitchBlackBackground"
     tools:context=".MainActivity">
     <!-- Top Section -->
     <LinearLayout
@@ -41,13 +42,22 @@
             android:src="@drawable/settings"
             android:layout_gravity="center_vertical" />
     </LinearLayout>
+    <TextView
+        android:id="@+id/lastUpdatedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="-5dp"
+        android:fontFamily="@font/san_frans"
+        android:textColor="@color/lightGray"
+        android:textSize="14sp" />
     <ImageView
         android:id="@+id/cloudIcon"
         android:layout_width="@dimen/cloudSize"
         android:layout_height="@dimen/cloudSize"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"
-        android:src="@drawable/rain" />
+        android:src="@drawable/fog" />
     <!-- Temperature Section -->
     <TextView
         android:id="@+id/temperatureText"
@@ -55,6 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:translationY="-20dp"
+        android:translationX="-1dp"
         android:gravity="center_horizontal"
         android:includeFontPadding="false"
         android:fontFamily="@font/san_frans_display"

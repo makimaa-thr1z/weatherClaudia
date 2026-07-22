@@ -19,4 +19,15 @@
     <color name="midSettingsBackgroundEndColor">#6FA3D8</color>
     <!-- divider -->
     <color name="dockDividerColor">#22FFFFFF</color>
+    <color name="lightGray">#99FFFFFF</color>
+    <!-- fog - cloudy icon color -->
+    <color name="cloudIconColor">#DCDFE1</color>
+    <!-- cloudy theme background -->
+    <color name="cloudyStartColor">#9BB5D0</color>
+    <color name="cloudyMiddleColor">#6F8BA8</color>
+    <color name="cloudyEndColor">#4E647A</color>
+    <!-- foggy theme -->
+    <color name="foggyStartColor">#B9B6B2</color>
+    <color name="foggyMiddleColor">#A6A39F</color>
+    <color name="foggyEndColor">#8E8B87</color>
 </resources>

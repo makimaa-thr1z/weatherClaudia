@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:id="@+id/settingsWindow"
+    android:background="@color/pitchBlackBackground"
     android:orientation="vertical"
     android:paddingBottom="40dp">
     <TextView
@@ -22,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
+        android:fontFamily="@font/san_frans"
         android:text="@string/settings_bottom_text"
         android:textColor="#99FFFFFF"
         android:textSize="15sp"/>
@@ -31,6 +33,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="36dp"
         android:layout_marginBottom="10dp"
+        android:fontFamily="@font/san_frans"
         android:text="@string/general"
         android:textColor="#66FFFFFF"
         android:textStyle="bold"
@@ -42,8 +45,7 @@
         android:background="@drawable/glass_card"
         android:orientation="vertical"
         android:paddingVertical="4dp">
-        <LinearLayout
-            android:id="@+id/temperatureRow"
+        <!--LinearLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:gravity="center_vertical"
@@ -59,6 +61,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
                 android:text="@string/tempFormats"
+                android:fontFamily="@font/san_frans_pro_display_med"
                 android:textColor="@android:color/white"
                 android:textSize="17sp"/>
             <Spinner
@@ -70,7 +73,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_marginStart="58dp"
-            android:background="#22FFFFFF"/>
+            android:background="#22FFFFFF"/-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
@@ -87,6 +90,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
                 android:text="@string/theme"
+                android:fontFamily="@font/san_frans_pro_display_med"
                 android:textColor="@android:color/white"
                 android:textSize="17sp"/>
             <Spinner
@@ -94,13 +98,45 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="58dp"
+            android:background="#22FFFFFF"/>
+        <LinearLayout
+            android:id="@+id/manageCoordinates"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp">
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_location"
+                app:tint="@android:color/white"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:text="@string/location"
+                android:fontFamily="@font/san_frans_pro_display_med"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"/>
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/right_arrow"
+                app:tint="#66FFFFFF"/>
+        </LinearLayout>
     </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="22dp"
         android:layout_marginBottom="10dp"
+        android:fontFamily="@font/san_frans"
         android:text="@string/about"
         android:textColor="#66FFFFFF"
         android:textStyle="bold"
@@ -124,6 +160,7 @@
             android:layout_marginStart="16dp"
             android:layout_weight="1"
             android:text="@string/creds"
+            android:fontFamily="@font/san_frans_pro_display_med"
             android:textColor="@android:color/white"
             android:textSize="17sp"/>
         <ImageView

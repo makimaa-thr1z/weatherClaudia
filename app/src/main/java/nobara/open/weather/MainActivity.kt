@@ -9,7 +9,7 @@ class MainActivity : AppCompatActivity()
         setContentView(R.layout.activity_main);
         if(savedInstanceState == null)
         {
-            if(!getSharedPreferences("basic_prefs", MODE_PRIVATE).getBoolean("isSetupOver", false))
+            if(!getSharedPreferences(BASIC_PREFS, MODE_PRIVATE).getBoolean(SETUP_STAT, false))
                 supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer, OnBoardFragment()).commit();
             else
                 supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer, MainScreen()).commit();

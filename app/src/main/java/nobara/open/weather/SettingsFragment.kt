@@ -19,13 +19,21 @@ class SettingsFragment : Fragment()
         var sharedPref = requireContext().getSharedPreferences(BASIC_PREFS, MODE_PRIVATE);
         var nobaraUtils = NobaraUtils(sharedPref, rootWindow, requireActivity(), requireContext());
         val themesRow = view.findViewById<Spinner>(R.id.themesRow);
+        val tempRow = view.findViewById<Spinner>(R.id.formattingTemp);
+        // adapters:
         val themes = resources.getStringArray(R.array.themes);
-        val adapterTheme = ArrayAdapter(requireContext(), R.layout.spinner_layout, themes)
+        val formats = resources.getStringArray(R.array.tempFormat);
+        val adapterTheme = ArrayAdapter(requireContext(), R.layout.spinner_layout, themes);
+        val adapterTemp = ArrayAdapter(requireContext(), R.layout.spinner_layout, formats);
+        // adapter init:
         themesRow.adapter = adapterTheme;
+        tempRow.adapter = adapterTemp;
         val themePosition = sharedPref.getInt(SELECTED_THEME, 0);
-        // set the selected theme:
+        val tempPosition = sharedPref.getInt(TEMPERATURE_PREFERENCE, 0);
+        // set the selected theme and temperature format:
         nobaraUtils.setTheme();
         themesRow.setSelection(themePosition, false); // we change the text on the spinner
+        tempRow.setSelection(tempPosition, false); // we change the text on the spinner
         // themes row tap trigger:
         themesRow.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, itemView: View?, position: Int, id: Long)
@@ -37,18 +45,27 @@ class SettingsFragment : Fragment()
             // nothing happens so...
             override fun onNothingSelected(parent: AdapterView<*>?) {};
         }
+        // temps row tap trigger:
+        tempRow.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, itemView: View?, position: Int, id: Long)
+            {
+                // values will be managed by the api, we just want to guide it to get the appropriate data the user wants.
+                sharedPref.edit { this.putInt(TEMPERATURE_PREFERENCE, position) };
+                nobaraUtils.toastThisShit(getString(R.string.refreshPlease));
+            }
+            // nothing happens so...
+            override fun onNothingSelected(parent: AdapterView<*>?) {};
+        }
         // view triggers:
         view.findViewById<View>(R.id.creditsWindow).setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
-                .setCustomAnimations(R.anim.slide_in, R.anim.fade_out, R.anim.fade_in,R.anim.slide_out)
-                .hide(this)
-                .replace(R.id.fragmentContainer, CreditsScreen()).addToBackStack(null).commit()
+                .setCustomAnimations(R.anim.slide_in, R.anim.fade_out, R.anim.fade_in, R.anim.slide_out)
+                .hide(this).add(R.id.fragmentContainer, CreditsScreen()).addToBackStack(null).commit()
         }
         view.findViewById<View>(R.id.manageCoordinates).setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
-                .setCustomAnimations(R.anim.slide_in, R.anim.fade_out, R.anim.fade_in,R.anim.slide_out)
-                .hide(this)
-                .replace(R.id.fragmentContainer, FetchCoordinates()).addToBackStack(null).commit()
+                .setCustomAnimations(R.anim.slide_in, R.anim.fade_out, R.anim.fade_in, R.anim.slide_out)
+                .hide(this).add(R.id.fragmentContainer, FetchCoordinates()).addToBackStack(null).commit()
         }
     }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?

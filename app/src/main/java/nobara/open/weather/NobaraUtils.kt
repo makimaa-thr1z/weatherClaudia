@@ -43,8 +43,9 @@ const val LAST_MONTH: String = "weatherLastUpdatedMonth";
 const val LAST_YEAR: String = "weatherLastUpdatedYeah";
 // for throwing us back at MainScreen():
 const val THROWBACK_HOME: String = "throwMeBackToWhereImSupposedToStay";
+const val TEMPERATURE_PREFERENCE: String = "temperatureUnit";
 // enum for SetData():
-enum class SetDataHelper { UPDATE_DATA, SKIP_UPDATE; }
+enum class SetDataHelper { UPDATE_DATA, SKIP_UPDATE; };
 // weather data:
 data class WeatherDisplayData(
     val city: String,

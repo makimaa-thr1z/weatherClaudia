@@ -121,7 +121,7 @@ class MainScreen : Fragment()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?)
     {
         super.onViewCreated(view, savedInstanceState);
-        // shared pref:
+        // init sharedPref here
         sharedPref = requireContext().getSharedPreferences(BASIC_PREFS, MODE_PRIVATE);
         // root layout:
         rootLayout = view.findViewById(R.id.main);
@@ -166,7 +166,9 @@ class MainScreen : Fragment()
                 val latitude = sharedPref.getString(LATITUDE, "34.6937")?.toDoubleOrNull() ?: 34.6937;
                 val longitude = sharedPref.getString(LONGITUDE, "135.5022")?.toDoubleOrNull() ?: 135.5022;
                 try {
-                    val weather = RetrofitWeatherClient.apiService.getForecast(latitude, longitude, METEO_DATA);
+                    val retroFitApi = RetrofitWeatherClient.apiService;
+                    val unit = retroFitApi.getTemperatureUnit(requireContext());
+                    val weather = retroFitApi.getForecast(latitude, longitude, METEO_DATA, unit);
                     val current = weather.current;
                     val data = WeatherDisplayData(
                         city = nobaraUtils.getCityName(latitude, longitude),

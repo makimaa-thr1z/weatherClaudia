@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Claudia</string>
+    <string name="degree">°</string>
+    <string name="temperature_format">%1$s%2$s</string>
+    <string-array name="themes">
+        <item>Dynamic</item>
+        <item>Hailstorm</item>
+        <item>Pitch Black</item>
+    </string-array>
+    <string-array name="tempFormat">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+    </string-array>
+    <string name="general">General</string>
+    <string name="theme">Themes</string>
+    <string name="tempFormats">Temperature Format</string>
+    <string name="creds">Credits</string>
+    <string name="settings">Settings</string>
+    <string name="settings_bottom_text">Personalize your experience</string>
+    <string name="about">About</string>
+    <string name="claudia_title">Yet another weather app.</string>
+    <string name="open_meteo">open-meteo.com</string>
+    <string name="weatherAPI">Weather API</string>
+    <string name="fonts">Fonts</string>
+    <string name="fonts_source">apple.com/fonts\nfonts.google.com</string>
+    <string name="made_love">Made with ❤️ by peachpixels</string>
+    <string name="welcome_text">Hello, sensei!</string>
+    <string name="requestLocation">Sensei, I need your location\ntemporarily.</string>
+    <string name="reqInfoOne">Your location stays on your device</string>
+    <string name="reqInfoTwo">We only use your location to determine your latitude and longitude for weather information. Your location is never stored or sent anywhere other than the weather service required to fetch the forecast. If you\'re curious, you can always review the source code. If you don\'t want to give the permission, you can always manage the coordinates inside the settings app.</string>
+    <string name="coordinates_title">Manage Coordinates</string>
+    <string name="coordinates">Change your coordinates manually.</string>
+    <string name="latitude_textfield">Enter valid latitude value</string>
+    <string name="longitude_textfield">Enter valid longitude value</string>
+    <string name="location">Location Settings</string>
+    <string name="pleasePut">Fill the coordinates to fetch weather data.</string>
+    <string name="refreshingData">refreshing the data…</string>
+    <string name="saved">Coordinates has been saved.</string>
+    <string name="refreshPlease">Please refresh to get the appropriate temperature data.</string>
+    <string name="percentageSymbol">%</string>
+    <!-- comments for the typa shii -->
+    <string name="overcast">overcast</string>
+    <string name="party_cloudy">partly cloudy</string>
+    <string name="mostly_sunny">mostly sunny</string>
+    <string name="sunny">sunny</string>
+    <string name="freezing_cold">freezing cold</string>
+    <string name="freezing_rain">freezing rain</string>
+    <string name="light_rain">light rain</string>
+    <string name="heavy_rain">heavy rain</string>
+    <string name="fog">foggy weather</string>
+    <string name="snow">snowy weather</string>
+    <string name="thunderstorm">thunderstorm</string>
+    <string name="lst_updated">Last updated on %1$s/%2$s/%3$s</string>
+</resources>
